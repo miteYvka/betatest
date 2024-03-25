@@ -6,6 +6,7 @@ import Link from "next/link";
 import Menu from "./Menu";
 import { $searchModal, openMenu, openSearchModal } from "@/context/modals";
 import { addOverflowHiddenToBody, handleCloseSearchModal } from "@/lib/utils/common";
+import CartPopup from "./CartPopup/CartPopup";
 
 const Header = () => {
     const {lang, translations } = useLang()
@@ -55,10 +56,7 @@ const Header = () => {
                         />
                     </li>
                     <li className='header__links__item'>
-                        <Link
-                            className='header__links__item__btn header__links__item__btn--cart'
-                            href='/cart'
-                        />
+                        <CartPopup/>
                     </li>
                     <li className='header__links__item header__links__item--profile'>
                         <Link
