@@ -4,6 +4,7 @@ import Header from "../modules/Header/Header";
 import SearchModal from "../modules/Header/SearchModal";
 import { $searchModal } from "@/context/modals";
 import { useUnit } from 'effector-react'
+import Footer from "../modules/Footer/Footer";
 
 const Layout = ({ children }: { children: React.ReactNode}) => {
     const searchModal = useUnit($searchModal)
@@ -22,7 +23,7 @@ const Layout = ({ children }: { children: React.ReactNode}) => {
                     </motion.div>
                 )}
             </AnimatePresence>
-            <div className='' />
+            <Footer/>
         </>
     )
 }
